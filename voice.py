@@ -14,4 +14,4 @@ def text_to_file(text):
     return out_file
 # print("script start", flush=True)
 # print(text_to_file("Hello my name is Andrii"))
-# print("script end", flush=True)
+
