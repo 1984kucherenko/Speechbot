@@ -1,8 +1,12 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes,MessageHandler, filters
 from voice import text_to_file
+import os
+from dotenv import load_dotenv
 
-TOKEN = "8533960104:AAGD3pV3vNZf-VfMEYMTOXOrpcfgNczC2vA"
+load_dotenv()
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+#TOKEN = "8533960104:AAGD3pV3vNZf-VfMEYMTOXOrpcfgNczC2vA"
 async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
